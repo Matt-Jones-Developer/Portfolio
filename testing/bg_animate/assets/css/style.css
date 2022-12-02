@@ -1,0 +1,75 @@
+@keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+  
+#aqua {
+    animation: flicker 1s ease alternate infinite;
+}
+
+#peach {
+    animation: flicker 2s ease alternate infinite;
+}
+
+:root {
+    --animation-time: 3s; 
+    --random: #777;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333333;
+}
+
+/* setup gridded BG */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+    /* grid-auto-rows: minmax(100px, auto); */
+    gap: 10px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.grid-container > * {
+    border: 1px solid black;
+}
+
+.grid-item {
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    animation: flicker var(--animation-time) ease alternate infinite;
+}
+
+#aqua {
+    background-color: aquamarine;
+}
+
+#peach {
+    background-color: #F3AEAC
+}
+
+#purple {
+    background-color: #A5ACF5;
+}
+
+#lumi {
+    background-color: #c0fa62;
+}
+
+#gb_white {
+    background-color: #E5F7D3;
+}
+
