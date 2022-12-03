@@ -1,16 +1,24 @@
 /* vars */
 
 :root {
+  /* basics */
   --dark: #333333;
   --light: #fff;
   --highlight: #74FBB5;
   --hover: #fff;
   --hover-span: orange;
   --box-shadow: rgba(0,0,0,0.8);
+  /* gameboy palette */
   --gb-lightgrey: #BCBEC3;
   --gb-darkgrey: #626C7A;
   --gb-claret: #712956;
   --gb-blue: #363960;
+  /* pastel palette */
+  --peachy: #F3AEAC;
+  --peachier: #EA655D;
+  --purps: #A5ACF5; 
+  --aqua: #74FBB5;
+  /* gradients */
   --gradient: linear-gradient(
     rgba(54, 54, 54, 0.8) 0%,
     rgba(88, 88, 88, 0.7) 100%);
@@ -26,13 +34,13 @@
   padding: 0;
 }
 
-html, body {
-  position: relative;
-  overflow-x: hidden;
+html {
   scroll-behavior: smooth;
 }
 
 body {
+  position: relative;
+  overflow-x: hidden;
   background-image: var(--gradient);
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
@@ -113,9 +121,9 @@ em {
 .nav-container {
   background-color: var(--dark);
   border-bottom: 3px solid var(--light);
+  top: 0;
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
   z-index: 9;
   /* animate */
   animation-name: slideDown;
@@ -223,12 +231,13 @@ em {
   animation: fadeIn 15s;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  grid-template-rows: repeat(24, 1fr);
-  gap: 5px;
+  grid-template-rows: repeat(16, 1fr);
+  gap: 3px;
   width: 100vw;
-  height: 50vh;
+  height: 250px;
   margin-left: .5rem;
   padding: 2rem;
+  padding-bottom: 4rem;
   z-index: -1;
 }
 
@@ -237,8 +246,8 @@ em {
 }
 
 .grid-item {
-  width: 70%;
-  height: 100%;
+  width: 50px;
+  height: 30px;
 }
 
 #aqua {
@@ -265,6 +274,7 @@ em {
 
 .page-section {
   margin: 2rem auto;
+  border: 1px red;
 }
 
 .about-boxes .container {
@@ -293,7 +303,8 @@ em {
 
 #about {
   position: relative;
-  top: -260px;
+  /* top: -250px; */
+  top: 0;
 }
 
 #blurb {
@@ -332,7 +343,8 @@ em {
 
 .page-section-projects {
   position: relative;
-  top: -250px;
+  /* top: -250px; */
+  top: 0;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -391,7 +403,7 @@ project-boxes .container {
 
 #studyguide {
   grid-area: studyguide;
-  background-image: url("../images/png/screenshots/ultimate_study_guide_topgrid_screenshot.png");
+  background-image: url("../images/png/screenshots/ultimate_study_guide_screenshot_new.png");
 }
 
 #rpk {
@@ -435,12 +447,12 @@ project-boxes .container {
 
 /* contact box */
 
-.page-section-contact {
+.page-section {
   position: relative;
-  top: -200px;
+  top: 0;
 }
 
-.contact-boxes .container {
+.boxes .container {
   display: grid;
   grid-template-columns: 75% 25%;
   grid-template-rows: 1fr;
@@ -449,5 +461,134 @@ project-boxes .container {
 
 .box ul {
   text-decoration: none;
+}
+
+#gh {
+  color: var(--aqua);
+}
+
+#lk {
+  color: var(--peachy);
+}
+
+#sk {
+  color: var(--purps);
+}
+
+#tw {
+  color: var(--aqua);
+}
+
+#el {
+  color: var(--peachy);
+}
+
+/* skills section */
+
+.skills-boxes .container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  text-align: left;
+  /* padding: 0 2rem; */
+  
+}
+
+.skills-box h2 {
+  padding: 0 0;
+}
+
+.skills-box ul {
+  display: flex;
+  letter-spacing: .5rem;
+  line-height: 2rem;
+}
+
+.language-logos {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+
+}
+
+#fe {
+  color: var(--peachy);
+}
+
+#be {
+  color: var(--purps);
+}
+
+#oop {
+  color: var(--aqua);
+}
+
+#vi {
+  color: var(--peachy);
+}
+
+#an {
+  color: var(--purps);
+}
+#fe {
+  color: var(--aqua);
+}
+
+#mp {
+  color: var(--aqua);
+}
+
+#pt {
+  color: var(--peachy);
+}
+
+#fp {
+  color: var(--purps);
+}
+
+
+
+/* footer */
+
+.footer {
+  background-color: var(--dark);
+  display: block;
+  /* position: relative;
+  top: 0; */
+  text-align: center;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.footer p {
+  padding-bottom: 2rem;
+}
+
+.footer-text {
+  padding: 0px 0px;
+}
+
+.footer em {
+  font-size: 10px;
+}
+
+.footer strong {
+  color: var(--peachier);
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.ul-icons {
+  display: inline-flex;
+  position: relative;
+  text-decoration: none;
+}
+
+.ul-icons > li {
+  display: inline-block;
+  padding: 1rem 1rem;
 }
 

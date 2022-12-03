@@ -40,7 +40,7 @@
                 <!-- background grid (long; so hidden!)-->
                 <!-- <object type="text/html" data="./assets/templates/bg_grid.html"></object> -->
                 <div class="bg-grid-container">
-                    <div class="grid-item"></div>
+                    <!-- <div class="grid-item"></div>
                     <div class="grid-item"></div>
                     <div class="grid-item"></div>
                     <div class="grid-item" id="aqua"></div>
@@ -135,7 +135,7 @@
                     <div class="grid-item" id="bg_white"></div>
                     <div class="grid-item"></div>
                     <div class="grid-item"></div>
-                    <div class="grid-item"></div>
+                    <div class="grid-item"></div> -->
                     <div class="grid-item"></div>
                     <div class="grid-item"></div>
                     <div class="grid-item"></div>
@@ -342,8 +342,8 @@
                             <div class="box" id="blurb">
                                 <h2>Professional Journey</h2>
                                 <p>
-                                    My name is Matt Jones and I am a passionate developer and designer. <br>
-                                    I love coding, problem-solving and building exciting, unique projects from the 
+                                    Hello World. My name is Matt Jones and I am a passionate web developer and designer. <br>
+                                    I love coding, problem-solving and building unique projects from the 
                                     <em><b>wild ideas</b></em> that keep me up at night!<br>
                                     <br>
                                     Learning is never ending; new coding skills, exploring new territories... 
@@ -369,13 +369,13 @@
                 <section class="page-section-projects" id="projects">
                     <h2>Projects & Commissions</h2>
                     <br>
-                    <div class="project-boxes">
+                    <div class="project-boxes" id="skills">
                         <div class="container">
                             <!-- projects grid -->
                             <div class="grid-container">
                                 <div id="studyguide" class="project-item">
                                     <div class="heading">
-                                        <a href="https://matt-jones-developer.github.io/ultimate_study_guide/">
+                                        <a href="https://matt-jones-developer.github.io/ultimate-study-guide/">
                                             Ultimate Study Guide</a></div>
                                 </div>
                                 <div id="rpk" class="project-item">
@@ -400,9 +400,33 @@
                         </div>
                     </div>
                 </section>
+                <section class="page-section" id="skills">
+                    <div class="skills-boxes">
+                        <div class="container">
+                            <div class="skills-box">
+                                <h2>Skills & Languages</h2>
+                                <div class="language-logos">
+                                    <img src="./assets/images/svg/logos/html5_lg.svg" alt="html5-logo">
+                                    <img src="./assets/images/svg/logos/css3_lg.svg" alt="css-logo">
+                                    <img src="./assets/images/svg/logos/js_lg.svg" alt="js-logo">
+                                    <img src="./assets/images/svg/logos/github_purple_lg.svg" alt="github-icon">
+                                    <img src="./assets/images/svg/logos/python-logo-generic.svg" alt="python-logo">
+                                </div>
+                                <!-- skills - s p r e a d -->
+                                <ul>
+                                    <li id="fe"><b>Front-end and UI design & development</b></li>
+                                    <li id="be"><b>Back-end python and databases</b></li>
+                                    <li id="vi"><b>Vector graphic illustrations</b></li>
+                                    <li id="mp"><b>Music Production & Recording</b></li>
+                                    <li id="an"><b>2D Animation & game design</b></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <!-- contact -->
-                <section class="page-section-contact" id="contact">
-                    <div class="contact-boxes">
+                <section class="page-section" id="contact">
+                    <div class="boxes">
                         <div class="container">
                             <div class="box">
                                 <h2>Contact Me</h2>
@@ -412,37 +436,59 @@
                                     <br>
                                     Please feel free to get in touch via any of the following methods: <br>
                                     <ul>
-                                        <li><a href="#github"><b>GitHub</b></a></li>
-                                        <li><a href="#github"><b>LinkedIn</b></a></li>
-                                        <li><a href="#github"><b>Slack Channel</b></a></li>
-                                        <li><a href="#github"><b>Twitter</b></a></li>
-                                        <li><a href="#github"><b>Email</b></a></li>
+                                        <li id="gh"><a href="#github"><b>GitHub</b></a></li>
+                                        <li id="lk"><a href="#github"><b>LinkedIn</b></a></li>
+                                        <li id="sk"><a href="#github"><b>Slack Channel</b></a></li>
+                                        <li id="tw"><a href="#github"><b>Twitter</b></a></li>
+                                        <li id="el"><a href="#github"><b>Email</b></a></li>
                                     </ul>
                                 </p>
                             </div>
-                            <div class="box">
-                                <div class="box" id="banner">
-                                    linkedIn profile banner
-                                    <div class="badge-base LI-profile-badge" id="badge" data-locale="en_US" 
-                                    data-size="large" data-theme="dark" data-type="HORIZONTAL" 
-                                    data-vanity="matt-jones-zx81" data-version="v1">
-                                        <a class="badge-base__link LI-simple-link" 
-                                        href="https://uk.linkedin.com/in/matt-jones-zx81?trk=profile-badge"></a>
-                                    </div>
+                            <div class="box" id="banner">
+                                <!-- linkedIn profile banner -->
+                                <div class="badge-base LI-profile-badge" id="badge" data-locale="en_US" 
+                                data-size="large" data-theme="dark" data-type="HORIZONTAL" 
+                                data-vanity="matt-jones-zx81" data-version="v1">
+                                    <a class="badge-base__link LI-simple-link" 
+                                    href="https://uk.linkedin.com/in/matt-jones-zx81?trk=profile-badge"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- 
-                portfolio container
-                <section class="page-section" id="work">
-                    <h2>Work</h2>
-                    <p>
-                        All my projects, divided up into boxes (grid it!)
-                    </p>
-                </section> -->
             </div>
         </main>
+        <!-- footer -->
+        <footer class="footer">
+            <!-- footer social icons -->
+            <div class="footer-icons">
+                <ul class="ul-icons">
+                    <li><a href="#"><img src="./assets/images/svg/icons/icn_mail_wht.svg" width="24px" height="24px" alt="mail-icn"></a></li>
+                    <li><a href="https://github.com/Matt-Jones-Developer" class="git-icn"><img src="./assets/images/svg/icons/github_icn_wht.svg" width="24px" height="24px" alt="github-icn"></a></li>
+                    <li><a href="https://glitchygames.slack.com"><img src="./assets/images/svg/icons/slack_color.svg" width="24px" height="24px" alt="slack-icn"></a></li>
+                    <li><a href="https://twitter.com/glitchy81_dev"><img src="./assets/images/svg/icons/icn_twitter_wht.svg" width="24px" height="24px" alt="twitter-icn"></a></li>
+                    <li><a href="#"><img src="./assets/images/svg/icons/icn_linkedin.svg" width="24px" height="24px" alt="linkedin-icn"></a></li>
+                </ul>
+            </div>
+            <div class="footer-text">
+                <p>
+                    Designed & <code style="color: #A0FCD6;">coded</code> with <strong>love</strong> 
+                    by <a href="https://github.com/Matt-Jones-Developer">Matt Jones</a>. &copy; 2022. All rights reserved.
+                </p>
+                <br>
+            </div>
+        </footer>
+        <!-- auto top -->
+        <script>
+            $(document).ready(function () {
+                $('html, body').scrollTop(0);
+
+                $(window).on('load', function () {
+                    setTimeout(function () {
+                        $('html, body').scrollTop(0);
+                    }, 0);
+                });
+            });
+        </script>
     </body>
 </html>
