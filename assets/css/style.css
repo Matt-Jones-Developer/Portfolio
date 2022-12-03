@@ -71,15 +71,23 @@ ul {
   padding-left: 1.5rem;
 }
 
+ul > li {
+  text-decoration: none;
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-right: 1rem;
+}
+
 a {
   text-decoration: none;
-  /* these seem like they're wrong way around? 
-  highlight = hover, light = normal etc*/
-  color: var(--highlight);
+  color: var(--light);
 }
 
 a:hover {
-  color: var(--light);
+  color: var(--highlight);
 }
 
 span {
@@ -315,14 +323,14 @@ em {
 
 /* projects section */
 
-.projects {
+.page-section-projects {
   position: relative;
   top: -250px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-.projects h2 {
+.page-section-projects h2 {
   margin-left: 0;
 }
 
@@ -417,3 +425,20 @@ project-boxes .container {
   font-size: 1.2rem;
   border-radius: 0 1rem 0 1rem;
 }
+
+/* contact box */
+
+.page-section-contact {
+  position: relative;
+  top: -200px;
+}
+
+.contact-boxes .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box ul {
+  text-decoration: none;
+}
+
