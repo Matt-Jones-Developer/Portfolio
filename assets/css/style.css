@@ -510,9 +510,15 @@ project-boxes .container {
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  padding: 2rem;
+  padding: .5rem;
+  padding-bottom: 1rem;
 
 }
+
+.language-logos img {
+  width: 70px;
+}
+
 
 #fe {
   color: var(--peachy);
@@ -549,6 +555,15 @@ project-boxes .container {
   color: var(--purps);
 }
 
+.music-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#scloud {
+  width: 40px;
+  height: 40px;
+}
 
 
 /* footer */
@@ -578,7 +593,7 @@ project-boxes .container {
 .footer strong {
   color: var(--peachier);
   font-family: monospace;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .ul-icons {
@@ -591,4 +606,6 @@ project-boxes .container {
   display: inline-block;
   padding: 1rem 1rem;
 }
+
+
 
