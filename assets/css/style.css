@@ -34,7 +34,7 @@ html, body {
 
 body {
   background-image: var(--gradient);
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
   color: var(--light);
   line-height: 1.5;
@@ -50,7 +50,6 @@ h4,
 h5,
 h6 {
   margin: 1rem 1rem;
-  font-family: 'Raleway', sans-serif;
   font-weight: 300;
 }
 
@@ -151,10 +150,11 @@ em {
 }
 
 .navbar a {
+  /* font-family: 'Raleway' sans-serif; */
   text-decoration: none;
   color: var(--light);
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 300;
 }
 
 .navbar a:hover {
@@ -217,7 +217,7 @@ em {
   
 }
 
-/* background anim */
+/* header background anim */
 
 .bg-grid-container {
   animation: fadeIn 15s;
@@ -261,7 +261,7 @@ em {
   animation: flicker 1s ease alternate infinite;
 }
 
-/* clean about me section */
+/* about me section */
 
 .page-section {
   margin: 2rem auto;
@@ -275,6 +275,7 @@ em {
   "blurb blurb photo"
   "spacer spacer banner";
   justify-content: center;
+  align-items: center;
 
 }
 
@@ -300,17 +301,23 @@ em {
   /* position: relative;
   left: -40px; */
   width: 1100px;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
 #photo img {
   width: 400px;
   height: 400px;
+  border-radius: 20rem;
+  border: 3px solid var(--highlight)
 }
 
 #photo {
   /* position: relative;
   right: 80px; */
   width: 500px;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 /* #spacer {
@@ -434,7 +441,9 @@ project-boxes .container {
 }
 
 .contact-boxes .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 1fr;
   justify-content: space-between;
 }
 
