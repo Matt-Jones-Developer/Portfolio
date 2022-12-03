@@ -14,7 +14,10 @@
   --gradient: linear-gradient(
     rgba(54, 54, 54, 0.8) 0%,
     rgba(88, 88, 88, 0.7) 100%);
-    --animation-time: 2s; 
+  --gradient-light: linear-gradient(45deg,
+    rgba(158, 158, 158, 0.8) 0%,
+    rgba(255, 255, 255, 0.7) 100%);
+  --animation-time: 2s; 
 }
 
 * {
@@ -23,12 +26,13 @@
   padding: 0;
 }
 
-html {
+html, body {
+  position: relative;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
-  overflow-x: hidden;
   background-image: var(--gradient);
   font-family: sans-serif;
   font-size: 1.2rem;
@@ -45,11 +49,21 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 1rem 2rem;
+  margin: 1rem 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
 }
 
 p {
-  margin: 2rem;
+  margin: 1rem;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 48px;
 }
 
 ul {
@@ -59,6 +73,8 @@ ul {
 
 a {
   text-decoration: none;
+  /* these seem like they're wrong way around? 
+  highlight = hover, light = normal etc*/
   color: var(--highlight);
 }
 
@@ -76,11 +92,15 @@ span:hover {
   cursor: pointer;
 }
 
+em {
+  color: var(--highlight);
+}
+
 /* containers */
 
 .container {
   margin: 0 auto;
-  /* padding: 1rem; */
+  padding: 0; 
 }
 
 .nav-container {
@@ -136,6 +156,7 @@ span:hover {
 .navbar ul {
   display: flex;
   list-style: none;
+  padding: 2rem;
 }
 
 .navbar ul li {
@@ -151,6 +172,7 @@ span:hover {
   justify-content:space-between;
   text-align: center;
   animation: moveInLeft 2s;
+  padding: 1rem;
 }
 
 .nav-left img {
@@ -175,7 +197,7 @@ span:hover {
   animation: fadeIn 2s;
   animation-delay: 2s;
   animation-fill-mode: backwards;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-top: 0;
 }
 
@@ -184,33 +206,31 @@ span:hover {
 .main {
   margin: 0 auto;
   padding: 2rem;
-}
-
-.main .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
 }
 
 /* background anim */
 
-.grid-container {
+.bg-grid-container {
+  animation: fadeIn 15s;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: repeat(24, 1fr);
   gap: 5px;
   width: 100vw;
-  height: 100vh;
-  margin-left: 1rem;
+  height: 50vh;
+  margin-left: .5rem;
+  padding: 2rem;
+  z-index: -1;
 }
 
-.grid-container > * {
+.bg-grid-container > * {
   border: 1px solid black;
 }
 
 .grid-item {
   width: 70%;
-  height: 70%;
+  height: 100%;
 }
 
 #aqua {
@@ -231,4 +251,169 @@ span:hover {
 #lumi {
   background-color: #c0fa62;
   animation: flicker 1s ease alternate infinite;
+}
+
+/* clean about me section */
+
+.page-section {
+  margin: 2rem auto;
+}
+
+.about-boxes .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr;
+  grid-template-areas: 
+  "blurb blurb photo"
+  "spacer spacer banner";
+  justify-content: center;
+
+}
+
+.box {
+  flex: 1;
+  background: var(--dark);
+  color: var(--light);
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .8);
+  padding: 2rem;
+  text-align: center;
+  
+}
+
+#about {
+  position: relative;
+  top: -260px;
+}
+
+#blurb {
+  text-align: left;
+  /* position: relative;
+  left: -40px; */
+  width: 1100px;
+}
+
+#photo img {
+  width: 400px;
+  height: 400px;
+}
+
+#photo {
+  /* position: relative;
+  right: 80px; */
+  width: 500px;
+}
+
+/* #spacer {
+  width: 30%;
+}
+
+#banner {
+  width: 30%;
+} */
+
+/* projects section */
+
+.projects {
+  position: relative;
+  top: -250px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.projects h2 {
+  margin-left: 0;
+}
+
+project-boxes .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-box {
+  /* flex: 1; */
+  /* background: var(--gb-lightgrey); */
+  color: var(--light);
+  border-radius: 1rem;
+  margin: 0;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .8);
+  text-align: center;
+  
+}
+
+/* projects grid */
+
+.grid-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 500px 300px 300px 300px;
+  gap: 1rem;
+  grid-template-areas: 
+  "studyguide studyguide studyguide"
+  "studyguide studyguide studyguide"
+  "rpk gameboy pools"
+  "bio horiseon other";
+}
+
+.project-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  align-items: center;
+  /* margin: 5px; */
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+  /* background-size: cover; */
+  /* width: 100%; */
+  
+}
+
+#studyguide {
+  grid-area: studyguide;
+  background-image: url("../images/png/screenshots/ultimate_study_guide_topgrid_screenshot.png");
+}
+
+#rpk {
+  grid-area: rpk;
+  background-image: url("../images/png/screenshots/rock_paper_knife_loader.png");
+}
+
+#gameboy {
+  grid-area: gameboy;
+  background-image: url("../images/png/screenshots/gameboy_assets_site.png");
+}
+
+#pools {
+  grid-area: pools;
+  background-image: url("../images/png/screenshots/cristalvision_site.png");
+}
+
+#bio {
+  grid-area: bio;
+  background-image: url("../images/png/screenshots/bio-metal.png");
+}
+
+#horiseon {
+  grid-area: horiseon;
+  background-image: url("../images/png/screenshots/horiseon_screenshot.png");
+}
+
+#survey {
+  grid-area: other;
+  background-image: url("../images/png/screenshots/survey_shot.png");
+}
+
+.heading {
+  background-color: rgba(0,0,0,0.7);
+  padding: 1rem;
+  height: 4rem;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 0 1rem 0 1rem;
 }
