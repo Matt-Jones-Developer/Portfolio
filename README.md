@@ -48,9 +48,7 @@ When viewing the section about your work then the section contains titled images
 
 When presented with the your first application then that application's image should be larger in size than the others 
 
-*will need to set the size larger (span 2-3 columns), whilst still being responsive on this one*
-
-When images of the applications are clicked then the user is taken to that deployed application *this does not allow me to add any annotation content then*
+When images of the applications are clicked then the user is taken to that deployed application 
 
 When the page is resized or viewed on various screens and devices then the layout is responsive and adapts to my viewport
 

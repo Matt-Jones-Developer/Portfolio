@@ -1,10 +1,10 @@
 
 // JS accreditation: https://css-tricks.com/random-numbers-css/
 
-var time = Math.random();
+const rate = Math.random();
 
 var aqua = document.querySelector('#aqua');
-aqua.style.setProperty('--animation-time', time +'s');
+aqua.style.setProperty('--animation-time', rate +'s');
 
 var peach = document.querySelector('#peach');
-peach.style.setProperty('--animation-time', time +'s');
+peach.style.setProperty('--animation-time', rate +'s');

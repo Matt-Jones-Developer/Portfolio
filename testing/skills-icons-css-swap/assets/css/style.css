@@ -1,0 +1,889 @@
+/* vars */
+
+:root {
+    /* basics */
+    --dark: #333333;
+    --light: #fff;
+    --highlight: #74FBB5;
+    --hover: #fff;
+    --hover-span: orange;
+    --box-shadow: rgba(0,0,0,0.8);
+    /* gameboy palette */
+    --gb-lightgrey: #BCBEC3;
+    --gb-darkgrey: #626C7A;
+    --gb-claret: #712956;
+    --gb-blue: #363960;
+    /* pastel palette */
+    --peachy: #F3AEAC;
+    --peachier: #EA655D;
+    --purps: #A5ACF5; 
+    --aqua: #74FBB5;
+    /* gradients */
+    --gradient: linear-gradient(
+      rgba(54, 54, 54, 0.8) 0%,
+      rgba(88, 88, 88, 0.7) 100%);
+    --gradient-light: linear-gradient(45deg,
+      rgba(158, 158, 158, 0.8) 0%,
+      rgba(255, 255, 255, 0.7) 100%);
+    --animation-time: 2s; 
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    position: relative;
+    overflow-x: hidden;
+    background-image: var(--gradient);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    color: var(--light);
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1rem 1rem;
+    font-weight: 300;
+  }
+  
+  p {
+    margin: 1rem;
+  }
+  
+  h1 {
+    font-size: 60px;
+  }
+  
+  h2 {
+    font-size: 48px;
+  }
+  
+  ul {
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+  }
+  
+  ul > li {
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-right: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--light);
+  }
+  
+  a:hover {
+    color: var(--highlight);
+  }
+  
+  span {
+    letter-spacing: .2rem;
+    color: var(--highlight);
+  }
+  
+  span:hover {
+    color: var(--hover-span);
+    cursor: pointer;
+  }
+  
+  em {
+    color: var(--highlight);
+  }
+  
+  /* containers */
+  
+  .container {
+    margin: 0 auto;
+    padding: 0; 
+  }
+  
+  .nav-container {
+    background-color: var(--dark);
+    border-bottom: 3px solid var(--light);
+    top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 9;
+    /* animate */
+    animation-name: slideDown;
+    animation-duration: 1s;
+    animation-fill-mode: none;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    /* webkit */
+    -webkit-animation-name: slideDown;
+    -webkit-animation-duration:1s;
+    -webkit-animation-fill-mode: none;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+  }
+  
+  /* navbar */
+  
+  .navbar {
+    color: var(--light);
+    height: 5rem;
+    padding: 1rem;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .navbar a {
+    /* font-family: 'Raleway' sans-serif; */
+    text-decoration: none;
+    color: var(--light);
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+  
+  .navbar a:hover {
+    color: var(--highlight);
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 2rem;
+  }
+  
+  .navbar ul li {
+    margin-right: 2rem;
+  }
+  
+  .navbar li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-left {
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+    animation: moveInLeft 2s;
+    padding: 1rem;
+  }
+  
+  .nav-left img {
+    width: 4rem;
+    /* chrome fix */
+    height: 4rem;
+    margin: .5rem 0;
+  }
+  
+  .nav-left a {
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+    text-align: center;
+  }
+  
+  .nav-right {
+    padding-top: 1rem;
+    padding-right: .5rem;
+  }
+  
+  .nav-right a {
+    animation: fadeIn 2s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
+  
+  /* hero BG - animated squares */
+  
+  .hero-header {
+    margin: 0 auto;
+  }
+  
+  .header-hero .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* main */
+  
+  .main {
+    margin: 0 auto;
+    padding: 2rem;
+    
+  }
+  
+  /* header background anim */
+  
+  .bg-grid-container {
+    animation: fadeIn 15s;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 3px;
+    width: 100vw;
+    height: 250px;
+    margin-left: .5rem;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    z-index: -1;
+  }
+  
+  .bg-grid-container > * {
+    border: 1px solid black;
+  }
+  
+  .grid-item {
+    width: 50px;
+    height: 30px;
+  }
+  
+  #aqua {
+    background-color: var(--highlight);
+    animation: flicker 1s ease alternate infinite;
+  }
+  
+  #peach {
+    background-color: #F3AEAC;
+    animation: flicker 2s ease alternate infinite;
+  }
+  
+  #purple {
+    background-color: #A5ACF5;
+    animation: flicker 2s ease alternate infinite;
+  }
+  
+  #lumi {
+    background-color: #c0fa62;
+    animation: flicker 1s ease alternate infinite;
+  }
+  
+  /* about me section */
+  
+  .page-section {
+    margin: 2rem auto;
+    border: 1px red;
+  }
+  
+  .about-boxes .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr;
+    grid-template-areas: 
+    "blurb blurb photo";
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .box {
+    flex: 1;
+    background: var(--dark);
+    color: var(--light);
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .8);
+    padding: 2rem;
+    text-align: center;
+    
+  }
+  
+  #about {
+    position: relative;
+    /* top: -250px; */
+    top: 0;
+  }
+  
+  #blurb {
+    text-align: left;
+    /* position: relative;
+    left: -40px; */
+    width: 1100px;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+  
+  #photo img {
+    width: 400px;
+    height: 400px;
+    border-radius: 20rem;
+    border: 3px solid var(--highlight)
+  }
+  
+  #photo {
+    /* position: relative;
+    right: 80px; */
+    width: 500px;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  /* #spacer {
+    width: 30%;
+  }
+  
+  #banner {
+    width: 30%;
+  } */
+  
+  /* projects section */
+  
+  .page-section-projects {
+    position: relative;
+    /* top: -250px; */
+    top: 0;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .page-section-projects h2 {
+    margin-left: 0;
+  }
+  
+  project-boxes .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project-box {
+    /* flex: 1; */
+    /* background: var(--gb-lightgrey); */
+    color: var(--light);
+    border-radius: 1rem;
+    margin: 0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .8);
+    text-align: center;
+    
+  }
+  
+  /* projects grid */
+  
+  .grid-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 500px 300px 300px 300px;
+    gap: 1rem;
+    grid-template-areas: 
+    "studyguide studyguide studyguide"
+    "studyguide studyguide studyguide"
+    "rpk gameboy pools"
+    "bio horiseon other";
+  }
+  
+  .project-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    align-items: center;
+    /* margin: 5px; */
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+    /* background-size: cover; */
+    /* width: 100%; */
+    
+  }
+  
+  #studyguide {
+    grid-area: studyguide;
+    background-image: url("../images/png/screenshots/ultimate_study_guide_screenshot_new.png");
+  }
+  
+  #rpk {
+    grid-area: rpk;
+    background-image: url("../images/png/screenshots/rock_paper_knife_loader.png");
+  }
+  
+  #gameboy {
+    grid-area: gameboy;
+    background-image: url("../images/png/screenshots/gameboy_assets_site.png");
+  }
+  
+  #pools {
+    grid-area: pools;
+    background-image: url("../images/png/screenshots/cristalvision_site.png");
+  }
+  
+  #bio {
+    grid-area: bio;
+    background-image: url("../images/png/screenshots/bio-metal.png");
+  }
+  
+  #horiseon {
+    grid-area: horiseon;
+    background-image: url("../images/png/screenshots/horiseon_screenshot.png");
+  }
+  
+  #survey {
+    grid-area: other;
+    background-image: url("../images/png/screenshots/survey_shot.png");
+  }
+  
+  .heading {
+    background-color: rgba(0,0,0,0.7);
+    padding: 1rem;
+    height: 4rem;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0 1rem 0 1rem;
+  }
+  
+  /* skills section */
+  
+  .skills-boxes .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    text-align: left;
+    /* padding: 0 2rem; */
+    
+  }
+  
+  .skills-box h2 {
+    padding: 0 0;
+  }
+  
+  .skills-box ul {
+    display: flex;
+    letter-spacing: .5rem;
+    line-height: 2rem;
+  }
+  
+  /* .language-logos {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem;
+    padding-bottom: 1rem;
+  
+  } */
+  
+  /* .language-logos img {
+    width: 70px;
+  } */
+  
+  /* for switched css imgs */
+  
+  .language-logos {
+    display: grid;
+    grid-template-columns: repeat(12 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "squid html5 css js git py fl db vs ink live log";
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .skills-logos {
+    /* width: 70px; */
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    align-items: center;
+    /* margin: 5px; */
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+    /* background-size: cover; */
+    /* width: 100%; */
+  }
+  
+  #squid {
+    grid-area: squid;
+    background-image: url("../images/svg/logos/Coder-Logo.png");
+  }
+  #html5 {
+    grid-area: html5;
+    background-image: url("../images/svg/logos/html5_lg.svg");
+  }
+  #css {
+    grid-area: css;
+    background-image: url("../images/svg/logos/css3_lg.svg");
+  }
+  #js {
+    grid-area: js;
+    background-image: url("../images/svg/logos/js_lg.svg");
+  }
+  #git {
+    grid-area: git;
+    background-image: url("../images/svg/logos/github_purple_lg.svg");
+  }
+  #py {
+    grid-area: py;
+    background-image: url("../images/svg/logos/python-logo.png");
+  }
+  #fl {
+    grid-area: fl;
+    background-image: url("../images/svg/logos/flask-logo-png-transparent.png");
+  }
+  #db {
+    grid-area: db;
+    background-image: url("../images/svg/logos/mongodb.png");
+  }
+  #vs {
+    grid-area: vs;
+    background-image: url("../images/svg/logos/vscode_logo.png");
+  }
+  #ink {
+    grid-area: ink;
+    background-image: url("../images/svg/logos/inkscape_logo.png");
+  }
+  #live {
+    grid-area: live;
+    background-image: url("../images/svg/logos/ableton_live.png");
+  }
+  #log {
+    grid-area: log;
+    background-image: url("../images/svg/logos/logic_pro_logo.png");
+  }
+  
+  
+  /*  skills s p r e a d - li's */
+  #fe {
+    color: var(--peachy);
+  }
+  
+  #be {
+    color: var(--purps);
+  }
+  
+  #oop {
+    color: var(--aqua);
+  }
+  
+  #vi {
+    color: var(--peachy);
+  }
+  
+  #an {
+    color: var(--purps);
+  }
+  #fe {
+    color: var(--aqua);
+  }
+  
+  #mp {
+    color: var(--aqua);
+  }
+  
+  #pt {
+    color: var(--peachy);
+  }
+  
+  #fp {
+    color: var(--purps);
+  }
+  
+  /* contact box */
+  
+  .page-section {
+    position: relative;
+    top: 0;
+  }
+  
+  .boxes .container {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+  }
+  
+  .box ul {
+    text-decoration: none;
+  }
+  
+  #gh {
+    color: var(--aqua);
+  }
+  
+  #lk {
+    color: var(--peachy);
+  }
+  
+  #sk {
+    color: var(--purps);
+  }
+  
+  #tw {
+    color: var(--aqua);
+  }
+  
+  #el {
+    color: var(--peachy);
+  }
+  
+  .music-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #scloud {
+    width: 40px;
+    height: 40px;
+  }
+  
+  
+  /* footer */
+  
+  .footer {
+    background-color: var(--dark);
+    display: block;
+    /* position: relative;
+    top: 0; */
+    text-align: center;
+    height: 150px;
+    margin: 0 auto;
+  }
+  
+  .footer p {
+    padding-bottom: 2rem;
+  }
+  
+  .footer-text {
+    padding: 0px 0px;
+  }
+  
+  .footer em {
+    font-size: 10px;
+  }
+  
+  .footer strong {
+    color: var(--peachier);
+    font-family: monospace;
+    font-size: 18px;
+  }
+  
+  .ul-icons {
+    display: inline-flex;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .ul-icons > li {
+    display: inline-block;
+    padding: 1rem 1rem;
+  }
+  
+  /* responsive media queries */
+  
+  @media screen and (max-width: 1330px) {
+  
+    /* resets */
+    h1,h2,h3 {
+      text-align: center;
+    }
+  
+    h1 {
+      padding-top: 1rem;
+      font-size: 40px;
+    }
+  
+    h2 {
+      font-size: 36px;
+    }
+  
+    /* navbar */
+    /* .nav-right {
+      margin-right: 0;
+    } */
+  
+    /* adjust header center */
+  
+    .bg-grid-container {
+      padding: 2rem 0;
+      margin-right: 5px;
+      gap: 2px;
+    }
+  
+    /* main edits */
+     .main {
+      padding: 2px;
+     }
+  
+    /* about section grid */
+  
+    .box {
+      padding: 5px;
+    }
+  
+    /* .about-boxes {
+      padding: 5px;
+      margin: 0 auto;
+    } */
+  
+    .about-boxes .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      /* height: 100vh; */
+      margin: .7rem;
+      padding: 5px;
+      /* grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: 
+      "blurb"
+      "blurb"
+      "blurb"
+      "photo";
+      justify-content: center;
+      align-items: center;
+      align-content: center; */
+  
+    }
+  
+    .about-boxes h2 {
+      text-align: left;
+    }
+  
+    #blurb {
+      padding: 5px;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    }
+  
+    #studyguide {
+      background-image: url(
+        "../images/png/screenshots/ultimate_study_guide_topgrid_screenshot.png");
+    }
+  
+    #project-item {
+      object-fit: scale-down;
+    }
+  
+    .language-logos img {
+      width: 40px;
+    }
+    
+    .skills-box ul {
+      letter-spacing: .2rem;
+      line-height: 1rem;
+    }
+  
+    #banner {
+      display: none;
+    }
+  
+    .boxes .container {
+      grid-template-columns: 100%;
+    }
+  }
+  
+  @media screen and (max-width:768px) {
+  
+    /* resets */
+    h1 {
+      font-size: 38px;
+    }
+    /* navbar size adjust */
+  
+    .navbar a {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+    }
+  
+    nav-left img {
+      width: 1rem;
+      height: 1rem;
+      margin-top: 1rem;
+    }
+  
+    nav-left a {
+      font-size: 12px;
+      margin-top: 1.2rem;
+      margin-left: 1rem;
+    }
+  
+    nav-right a {
+      font-size: .8rem;
+    }
+  
+  }
+  
+  @media screen and (max-width: 414px) {
+    /* resets */
+    h1 {
+      font-size: 32px;
+    }
+    /* nav */
+    .navbar a {
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+  
+    nav-left a {
+      font-size: 1rem;
+      margin-top: 1.2rem;
+      margin-left: 1rem;
+    }
+  
+    nav-right a {
+      font-size: .6rem;
+    }
+  
+    #home, #abt {
+      display: none;
+    }
+  
+    /* project grid */
+    /* .project-boxes {
+      padding-left: 5px;
+      padding-right: 5px;
+    } */
+    .project-boxes .container {
+  
+    }
+    .grid-container {
+      display: block;
+    }
+  
+    .project-item {
+      height: 300px;
+    }
+  
+    /* app icons */
+    .language-logos img {
+      display: grid;
+      grid-template-columns: repeat(6 1fr);
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 
+      "squid html5 css js git py" 
+      "fl db vs ink live log";
+    }
+  
+  }

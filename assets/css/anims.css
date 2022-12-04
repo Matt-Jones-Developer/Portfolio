@@ -47,7 +47,7 @@
     }
 }
 
-@keyframes moveInLeft {
+@keyframes easeInOutLeft {
     0% {
         opacity: 0;
         transform: translateX(-10rem);
@@ -63,7 +63,7 @@
     }
 }
 
-@-webkit-keyframes moveInLeft {
+@-webkit-keyframes easeInOutLeft {
     0% {
         opacity: 0;
         transform: translateX(-10rem);
@@ -161,7 +161,7 @@
     100% {transform: rotate(0deg);}
 }
 
-@keyframes flicker {
+@keyframes randomFade {
     0% {
       opacity: 1;
     }
@@ -170,7 +170,7 @@
     }
 }
 
-@-webkit-keyframes flicker {
+@-webkit-keyframes randomFade {
     0% {
       opacity: 1;
     }

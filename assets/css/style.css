@@ -111,6 +111,15 @@ em {
   color: var(--highlight);
 }
 
+/* header */
+
+.header {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  top: 0;
+}
+
 /* containers */
 
 .container {
@@ -119,6 +128,7 @@ em {
 }
 
 .nav-container {
+  width: 100%;
   background-color: var(--dark);
   border-bottom: 3px solid var(--light);
   top: 0;
@@ -187,7 +197,7 @@ em {
   display: flex;
   justify-content:space-between;
   text-align: center;
-  animation: moveInLeft 2s;
+  animation: easeInOutLeft 2s;
   padding: 1rem;
 }
 
@@ -217,12 +227,16 @@ em {
   margin-top: 0;
 }
 
-/* main */
+/* hero BG - animated squares */
 
-.main {
+.hero-header {
   margin: 0 auto;
-  padding: 2rem;
-  
+}
+
+.header-hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* header background anim */
@@ -252,29 +266,41 @@ em {
 
 #aqua {
   background-color: var(--highlight);
-  animation: flicker 1s ease alternate infinite;
+  animation: randomFade 1s ease alternate infinite;
 }
 
 #peach {
   background-color: #F3AEAC;
-  animation: flicker 2s ease alternate infinite;
+  animation: randomFade 2s ease alternate infinite;
 }
 
 #purple {
   background-color: #A5ACF5;
-  animation: flicker 2s ease alternate infinite;
+  animation: randomFade 3s ease alternate infinite;
 }
 
 #lumi {
   background-color: #c0fa62;
-  animation: flicker 1s ease alternate infinite;
+  animation: randomFade 2s ease alternate infinite;
+}
+
+/* main */
+
+.main {
+  margin: 0 auto;
+  padding: 2rem;
+  
 }
 
 /* about me section */
 
 .page-section {
   margin: 2rem auto;
-  border: 1px red;
+  /* border: 1px solid red; */
+}
+
+.about-boxes {
+  margin: 0 auto;
 }
 
 .about-boxes .container {
@@ -282,10 +308,9 @@ em {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 2fr;
   grid-template-areas: 
-  "blurb blurb photo"
-  "spacer spacer banner";
+  "blurb blurb photo";
   justify-content: center;
-  align-items: center;
+  align-items: bottom;
 
 }
 
@@ -308,27 +333,26 @@ em {
 }
 
 #blurb {
+  /* for header? */
   text-align: left;
-  /* position: relative;
-  left: -40px; */
   width: 1100px;
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
 
 #photo img {
-  width: 400px;
-  height: 400px;
+  width: 380px;
+  height: 380px;
   border-radius: 20rem;
-  border: 3px solid var(--highlight)
+  border: 3px solid var(--highlight);
+  margin-top: .5rem;
 }
 
 #photo {
   /* position: relative;
   right: 80px; */
   width: 500px;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
+  padding: 2rem;
 }
 
 /* #spacer {
@@ -382,7 +406,7 @@ project-boxes .container {
   "studyguide studyguide studyguide"
   "studyguide studyguide studyguide"
   "rpk gameboy pools"
-  "bio horiseon other";
+  "bio horiseon survey";
 }
 
 .project-item {
@@ -432,7 +456,7 @@ project-boxes .container {
 }
 
 #survey {
-  grid-area: other;
+  grid-area: survey;
   background-image: url("../images/png/screenshots/survey_shot.png");
 }
 
@@ -443,6 +467,157 @@ project-boxes .container {
   color: white;
   font-size: 1.2rem;
   border-radius: 0 1rem 0 1rem;
+}
+
+/* skills section */
+
+.skills-boxes .container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  text-align: left;
+  /* padding: 0 2rem; */
+  padding-bottom: 1rem;
+  
+}
+
+.skills-box h2 {
+  padding: 0 0;
+}
+
+.skills-box ul {
+  display: flex;
+  letter-spacing: .5rem;
+  line-height: 2rem;
+}
+
+.language-logos {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  padding: .5rem;
+  padding-bottom: 1rem;
+
+}
+
+.language-logos img {
+  width: 70px;
+}
+
+/* for switched css imgs */
+
+/* .language-logos {
+  display: grid;
+  grid-template-columns: repeat(12 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "squid html5 css js git py fl db vs ink live log";
+  justify-content: space-around;
+  align-items: center;
+  padding: .5rem;
+  padding-bottom: 1rem;
+} */
+
+/* .skills-logos {
+  width: 70px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  align-items: center;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+} */
+
+/* 
+#squid {
+  grid-area: squid;
+  background-image: url("../images/svg/logos/Coder-Logo.png");
+}
+#html5 {
+  grid-area: html5;
+  background-image: url("../images/svg/logos/html5_lg.svg");
+}
+#css {
+  grid-area: css;
+  background-image: url("../images/svg/logos/css3_lg.svg");
+}
+#js {
+  grid-area: js;
+  background-image: url("../images/svg/logos/js_lg.svg");
+}
+#git {
+  grid-area: git;
+  background-image: url("../images/svg/logos/github_purple_lg.svg");
+}
+#py {
+  grid-area: py;
+  background-image: url("../images/svg/logos/python-logo.png");
+}
+#fl {
+  grid-area: fl;
+  background-image: url("../images/svg/logos/flask-logo-png-transparent.png");
+}
+#db {
+  grid-area: db;
+  background-image: url("../images/svg/logos/mongodb.png");
+}
+#vs {
+  grid-area: vs;
+  background-image: url("../images/svg/logos/vscode_logo.png");
+}
+#ink {
+  grid-area: ink;
+  background-image: url("../images/svg/logos/inkscape_logo.png");
+}
+#live {
+  grid-area: live;
+  background-image: url("../images/svg/logos/ableton_live.png");
+}
+#log {
+  grid-area: log;
+  background-image: url("../images/svg/logos/logic_pro_logo.png");
+} */
+
+
+/*  skills s p r e a d - li's */
+#fe {
+  color: var(--peachy);
+}
+
+#be {
+  color: var(--purps);
+}
+
+#oop {
+  color: var(--aqua);
+}
+
+#vi {
+  color: var(--peachy);
+}
+
+#an {
+  color: var(--purps);
+}
+#fe {
+  color: var(--aqua);
+}
+
+#mp {
+  color: var(--aqua);
+}
+
+#pt {
+  color: var(--peachy);
+}
+
+#fp {
+  color: var(--purps);
 }
 
 /* contact box */
@@ -483,83 +658,12 @@ project-boxes .container {
   color: var(--peachy);
 }
 
-/* skills section */
-
-.skills-boxes .container {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 1fr;
-  justify-content: center;
-  text-align: left;
-  /* padding: 0 2rem; */
-  
-}
-
-.skills-box h2 {
-  padding: 0 0;
-}
-
-.skills-box ul {
-  display: flex;
-  letter-spacing: .5rem;
-  line-height: 2rem;
-}
-
-.language-logos {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  align-items: center;
-  padding: .5rem;
-  padding-bottom: 1rem;
-
-}
-
-.language-logos img {
-  width: 70px;
-}
-
-
-#fe {
-  color: var(--peachy);
-}
-
-#be {
-  color: var(--purps);
-}
-
-#oop {
-  color: var(--aqua);
-}
-
-#vi {
-  color: var(--peachy);
-}
-
-#an {
-  color: var(--purps);
-}
-#fe {
-  color: var(--aqua);
-}
-
-#mp {
-  color: var(--aqua);
-}
-
-#pt {
-  color: var(--peachy);
-}
-
-#fp {
-  color: var(--purps);
-}
-
 .music-link {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #scloud {
   width: 40px;
   height: 40px;
@@ -607,5 +711,303 @@ project-boxes .container {
   padding: 1rem 1rem;
 }
 
+/* responsive media queries */
+
+/* large monitor niggle adjustment */
+@media screen and (max-width: 1550px) {
+  #blurb {
+    width: 900px;
+  }
+
+  #photo img {
+    width: 400px;
+    height: 400px;
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1330px) {
+
+  /* resets */
+  h1,h2,h3 {
+    text-align: center;
+  }
+
+  h1 {
+    padding-top: 1rem;
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  /* adjust header center */
+
+  .bg-grid-container {
+    padding: 2rem 0;
+    margin-right: 5px;
+    gap: 2px;
+  }
+
+  /* main edits */
+   .main {
+    padding: 2px;
+   }
+
+  /* about section grid */
+
+  .box {
+    padding: 5px;
+  }
+
+  /* .about-boxes {
+    padding: 5px;
+    margin: 0 auto;
+  } */
+
+  .about-boxes .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: .7rem;
+    padding: 5px;
+
+  }
+
+  .about-boxes h2 {
+    text-align: left;
+  }
+
+  #blurb {
+    width: 800px;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  #photo {
+    padding-top: 1rem;
+  }
+
+  #studyguide {
+    background-image: url(
+      "../images/png/screenshots/ultimate_study_guide_topgrid_screenshot.png");
+  }
+
+  #project-item {
+    object-fit: scale-down;
+  }
+
+  .language-logos img {
+    width: 40px;
+  }
+  
+  .skills-box ul {
+    letter-spacing: .2rem;
+    line-height: 1rem;
+  }
+
+  #banner {
+    display: none;
+  }
+
+  .boxes .container {
+    grid-template-columns: 100%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  /* ipad 12.9 */
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 
+    500px 400px 400px 400px;
+    grid-template-areas: 
+    "studyguide studyguide"
+    "rpk gameboy"
+    "pools horiseon"
+    "bio survey";
+  }
+
+  #blurb {
+    padding: 1rem;
+    width: 950px;
+  }
+
+  #photo {
+    padding: 1rem;
+  }
+}
+
+/* more niggles */
+@media screen and (max-width:838px) {
+
+  #blurb {
+    width: 750px;
+  }
+}
 
 
+@media screen and (max-width:768px) {
+
+  /* resets */
+  h1 {
+    font-size: 38px;
+  }
+  /* navbar size adjust */
+
+  .navbar a {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+
+  nav-left img {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 1rem;
+  }
+
+  nav-left a {
+    font-size: 12px;
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+  }
+
+  nav-right a {
+    font-size: .8rem;
+  }
+
+  /* projects grid */
+
+  /* ipad reg and mini */
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 
+    400px 400px 400px 400px
+    400px 400px 400px;
+    grid-template-areas:
+    "studyguide studyguide"
+    "rpk rpk"
+    "gameboy gameboy"
+    "pools pools"
+    "horiseon horiseon"
+    "bio bio"
+    "survey survey";
+  }
+
+  /* skills section */
+
+  .skills-box ul {
+    display: block;
+    text-align: center;
+    letter-spacing: .3rem;
+    line-height: 2rem;
+  }
+
+  #blurb {
+    width: 700px;
+  }
+
+  #photo {
+    padding: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 414px) {
+  /* resets */
+  h1 {
+    font-size: 32px;
+  }
+  /* nav */
+  .navbar a {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  nav-left a {
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+  }
+
+  nav-right a {
+    font-size: .6rem;
+  }
+
+  #home, #abt {
+    display: none;
+  }
+
+  #blurb {
+    width: 400px;
+    margin: 0;
+  }
+
+  /* project grid */
+  /* .project-boxes {
+    padding-left: 5px;
+    padding-right: 5px;
+  } */
+  .project-boxes .container {
+
+  }
+  .grid-container {
+    display: block;
+  }
+
+  .project-item {
+    height: 300px;
+    margin-bottom: 2rem;
+  }
+
+  /* app icons */
+  /* .language-logos img {
+    display: grid;
+    grid-template-columns: repeat(6 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "squid html5 css js git py" 
+    "fl db vs ink live log";
+  } */
+
+  .skills-box ul {
+    display: block;
+    letter-spacing: .3rem;
+    line-height: 2rem;
+  }
+
+  .language-logos img {
+    width: 20px;
+  }
+
+  .footer {
+    height: 12rem;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  #blurb {
+    width: 350px;
+    padding: 0;
+    margin: 0;
+  }
+  #photo img {
+    width: 300px;
+    height: 300px;
+
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #blurb {
+    width: 310px;
+    padding: 0;
+    margin: 0;
+  }
+}
