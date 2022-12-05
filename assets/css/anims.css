@@ -144,24 +144,24 @@
 }
 
 @keyframes shake {
-    0% {transform: rotate(5deg);}
-    20% {transform: rotate(25deg);}
-    40% {transform: rotate(-5deg);}
-    60% {transform: rotate(35deg);}
-    80% {transform: rotate(-5deg);}
+    0% {transform: rotate(.5deg);}
+    20% {transform: rotate(.25deg);}
+    40% {transform: rotate(-.5deg);}
+    60% {transform: rotate(.35deg);}
+    80% {transform: rotate(-.5deg);}
     100% {transform: rotate(0deg);}
 }
 
 @-webkit-keyframes shake {
-    0% {transform: rotate(5deg);}
-    20% {transform: rotate(25deg);}
-    40% {transform: rotate(-5deg);}
-    60% {transform: rotate(35deg);}
-    80% {transform: rotate(-5deg);}
+    0% {transform: rotate(.5deg);}
+    20% {transform: rotate(.25deg);}
+    40% {transform: rotate(-.5deg);}
+    60% {transform: rotate(.35deg);}
+    80% {transform: rotate(-.5deg);}
     100% {transform: rotate(0deg);}
 }
 
-@keyframes randomFade {
+@keyframes colourFade {
     0% {
       opacity: 1;
     }
@@ -170,7 +170,7 @@
     }
 }
 
-@-webkit-keyframes randomFade {
+@-webkit-keyframes colourFade {
     0% {
       opacity: 1;
     }

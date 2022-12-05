@@ -1,0 +1,100 @@
+div {
+    margin: 200px;
+}
+
+/* basic zoom */
+
+/* image container parent */
+
+.hover-zoom {
+    /* set a width/height */
+    width: 500px;
+    height: 300px;
+    /* hide overflow of child */
+    overflow: hidden;
+    border: 1px solid red;
+}
+/* zoom transistion */
+.hover-zoom img {
+    /* smooth effect */
+    transition: transform .5s ease;
+}
+
+/* transform once img hovered over*/
+.hover-zoom:hover img {
+    transform: scale(1.5);
+    /* add image options */
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* slower zoom */
+
+.hover-zoomer {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid red;
+}
+
+/* zoom transistion */
+.hover-zoomer img {
+    /* smooth effect */
+    transition: transform 5s ease-in;
+}
+
+/* transform once img hovered over*/
+.hover-zoomer:hover img {
+    transform: scale(2);
+    /* add image options */
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* set a quick snap back? */
+.hover-zoomer img:hover::after {
+    transition: transform .5s ease-in-out;
+}
+
+
+/* slo-mo - doesn't work?*/
+
+.hover-zoom-slo {
+    /* set a width/height */
+    width: 500px;
+    height: 300px;
+    /* hide overflow of child */
+    overflow: hidden;
+    border: 1px solid red;
+}
+
+.hover-zoom-slo img {
+    transform-origin: 50% 65%;
+    transition: transform 5s, filter 3s ease-in-out;
+    filter: brightness(150%);
+}
+
+/* the transform */
+
+zoom-hover-slo:hover img {
+    filter: brightness(100%);
+    transform: scale(3);
+}
+
+/* zoom w rotate */
+
+.hover-zoom-rot {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.hover-zoom-rot img {
+    transition: transform .5s ease-in-out;
+}
+
+.hover-zoom-rot:hover img {
+    transform: scale(2) rotate(350deg);
+}
