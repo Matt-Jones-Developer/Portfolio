@@ -34,9 +34,6 @@ The link for this repo: https://github.com/Matt-Jones-Developer/Portfolio
 ![This is a screenshot](/assets/images/demo/portfolio_screenshot1.png)
 ![This is a screenshot](/assets/images/demo/portfolio_screenshot2.png)
 
-Here is a video of the Python game - if you can't be bothered to install it!
-![This is a video](https://e1.pcloud.link/publink/show?code=XZU8fYZEKmfYgAKWIpmU7wPOCJv7Rg7J25k)
-
 
 ## Design & Features
 
