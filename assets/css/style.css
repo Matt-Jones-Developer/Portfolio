@@ -196,7 +196,7 @@ em {
 
 .nav-right {
   padding-top: 1rem;
-  padding-right: .5rem;
+  padding-right: .6rem;
 }
 
 .nav-right a {
@@ -443,38 +443,22 @@ project-boxes .container {
 /*  skills s p r e a d  */
 
 #fe {
-  color: var(--peachy);
+  color: var(--aqua);
 }
 
 #be {
   color: var(--purps);
 }
 
-#oop {
-  color: var(--aqua);
-}
-
 #vi {
   color: var(--peachy);
-}
-
-#an {
-  color: var(--purps);
-}
-
-#fe {
-  color: var(--aqua);
 }
 
 #mp {
   color: var(--aqua);
 }
 
-#pt {
-  color: var(--peachy);
-}
-
-#fp {
+#an {
   color: var(--purps);
 }
 
@@ -490,23 +474,23 @@ project-boxes .container {
 
 /* contact links */
 
-#gh {
+#gh:hover {
   color: var(--aqua);
 }
 
-#lk {
+#lk:hover {
   color: var(--peachy);
 }
 
-#sk {
+#sk:hover {
   color: var(--purps);
 }
 
-#tw {
+#tw:hover {
   color: var(--aqua);
 }
 
-#el {
+#el:hover {
   color: var(--peachy);
 }
 
@@ -516,7 +500,7 @@ project-boxes .container {
   align-items: center;
 }
 
-#scloud {
+#scloud, #scloud1 {
   width: 40px;
   height: 40px;
 }
