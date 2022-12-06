@@ -9,15 +9,11 @@ It includes an about me section, a projects section, a skills and contact sectio
 
 I want the portfolio to take on a more 'working professional' vibe compared to my 'metal-bio' project page which really was a chance to have fun, to express my personality and interests.  This site is fully responsive as per the criteria and I am really pleased with how far I've come in just a few weeks.  There were lots of challenges, changes and updates required for this project, I'd estimate over 80 hours were poured into this portfolio.
 
-The criteria for this project are listed within the Acceptance Criteria section of this readme guide.
-
 ## Table of Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Acceptance-Criteria](#acceptance-criteria)
 * [Mock-up-Design](#mock-up-design)
-* [Project-Annotation](#project-annotation)
 * [License](#license)
 * [Badges](#badges)
 
@@ -42,25 +38,6 @@ Here is a video of the Python game - if you can't be bothered to install it!
 ![This is a video](https://e1.pcloud.link/publink/show?code=XZU8fYZEKmfYgAKWIpmU7wPOCJv7Rg7J25k)
 
 
-## Acceptance Criteria
-
-I have met and exceeded the Acceptance Criteria by completing the following:
-
-When the page is loaded the page presents your name, a recent photo or avatar, and links to sections about you, your work, and how to contact you: DONE
-
-When one of the links in the navigation is clicked then the UI scrolls to the corresponding section: DONE
-
-When viewing the section about your work then the section contains titled images of your applications: DONE
-
-When presented with the your first application then that application's image should be larger in size than the others: DONE 
-
-When images of the applications are clicked then the user is taken to that deployed application: 
-
-*I am not sure if that's possible?  I researched but found nothing.  I tagged the text descriptions on each image as anchors.  I hope this is acceptable.*
-
-When the page is resized or viewed on various screens and devices then the layout is responsive and adapts to my viewport: DONE
-
-
 ## Design & Features
 
 When I first set out in designing this portfolio I had many complicated ideas and revised my design several times.  
@@ -70,7 +47,7 @@ I much prefer what I ended up with to represent myself and my work, I am also re
 I will endeavour to include the following goals for this project:
 
 - Sticky Navbar: DONE
-- GRID of coloured squares: DONE - overcame a lot here, even tried to implement a random(math) function in JS, but it did'nt really work and decided to omit it.  I am really happy with how this came out and I will make the colours randomise to random squares once I have a better grasp of JavaScript.
+- GRID of coloured squares: DONE - overcame a lot here, even tried to implement a random(math) function in JS, but it didn't really work and decided to omit it.  I am really happy with how this came out and I will make the colours randomise to random squares once I have a better grasp of JavaScript.
 
 - site is 100% responsive on any device or screen adjustment: DONE 
 - each project image link contains: transparent bg text section layered over the image with intro blurb: DONE
@@ -103,11 +80,6 @@ mockup - show the actual mockup I designed before coding - as a screenshot here.
 - colour palette - how I chose them and why.
 - any graphic or font design or workflow - why I chose them.
 - How the design helped to cater for all the project FEATURES above.
-
-
-## Project Annotation
-
-I wanted to mention what the motivation was behind each project, what I enjoyed, what I struggled with and how I overcame it - so I will have to put that here since the brief requires the project links load the deployed sites (my idea was to have a small intro (annotations) with links for the sites github repo and deployment link)
 
 First design wireframe:
 
