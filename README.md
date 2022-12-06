@@ -7,7 +7,7 @@ Probably the most important project to complete (next to actual deployed web app
 
 It includes an about me section, a projects section, a skills and contact section, sticky navbar and raised footer.
 
-I want the portfolio to take on a more 'working professional' vibe compared to my 'metal-bio' project page which really was a chance to have fun, to express my personality and interests.  This site is fully responsive as per the criteria and I am really pleased with how far I've come in just a few weeks.  There were lots of challenges, changes and updates required for this project, I'd estimate over 80 hours were poured into this portfolio.
+I want the portfolio to take on a more 'working professional' vibe compared to my 'metal-bio' project page which really was a chance to have fun, to express my personality and interests.  This site is fully responsive as per the criteria and I am really pleased with how far I've come in just a few months.  There were lots of challenges, changes and updates required for this project, I'd estimate over 80 hours were poured into this portfolio.
 
 ## Table of Contents
 
@@ -71,12 +71,10 @@ I will endeavour to include the following goals for this project:
 
 ## Mock-up Design
 
-mockup - show the actual mockup I designed before coding - as a screenshot here. 
+mockup - here are my wireframes and design mockups I created before coding - I ended up reverting back to the original design to meet the criteria but still included the gameboy slide reel inside my gameboy assets website.
 
-- layout design - what goes where and why.
-- colour palette - how I chose them and why.
-- any graphic or font design or workflow - why I chose them.
-- How the design helped to cater for all the project FEATURES above.
+- layout design - kept it simple and followed the assessment criteria, I wanted to include other information but felt that the brief didn.t allow me to do so without changing the criteria. 
+- colour palette - I chose light and dark greys as the main backgrounds, highlighted by aqua.  I wanted to make the colour grid randomise but I ended up using CSS animations to achieve the effect I wanted.  The secondary palette was to complement the gameboy page (you can view my palettes in the design folder)
 
 First design wireframe:
 
