@@ -121,7 +121,7 @@ Updated (used for Gameboy Assets project in the end):
 
 ## License 
 
-Personal License - to copy the license to somewhat protect my code from use or replication.
+Licensed under MIT.  Please view the license file included in the repo.
 
 Copyright (c) [2022] [Matt Jones]
 
