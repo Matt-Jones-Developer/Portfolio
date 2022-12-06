@@ -26,9 +26,7 @@
   scroll-behavior: smooth;
 }
 
-/* html {
-  scroll-behavior: smooth;
-} */
+/* added wrapper to fix overflowX in safari */
 
 .wrapper {
   position: relative;
@@ -277,6 +275,10 @@ em {
   margin: 2rem auto;
 }
 
+.page-section h1 {
+  padding: 0;
+}
+
 .about-boxes .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -358,53 +360,41 @@ project-boxes .container {
 
 }
 
-/* .project-item:hover {
-  no scaling - causes glitching BG thanks safari!!
-  transform: scale(1.02);
-  -webkit-transform: scale(1.02);
-} */
+/* project screenshots */
 
 #studyguide {
   grid-area: studyguide;
   background-image: url("../images/png/screenshots/ultimate_study_guide_screenshot_new.png");
-  /* if NO scale - delete these! */
-  transition: transform .7s ease-in;
 }
 
 #rpk {
   grid-area: rpk;
   background-image: url("../images/png/screenshots/rock_paper_knife_loader.png");
-  transition: transform .3s ease-in;
 }
 
 #gameboy {
   grid-area: gameboy;
   background-image: url("../images/png/screenshots/gameboy_assets_site.png");
-  transition: transform .3s ease-in;
 }
 
 #pools {
   grid-area: pools;
   background-image: url("../images/png/screenshots/cristalvision_site.png");
-  transition: transform .3s ease-in;
 }
 
 #bio {
   grid-area: bio;
   background-image: url("../images/png/screenshots/bio-metal.png");
-  transition: transform .3s ease-in;
 }
 
 #horiseon {
   grid-area: horiseon;
   background-image: url("../images/png/screenshots/horiseon_screenshot.png");
-  transition: transform .3s ease-in;
 }
 
 #survey {
   grid-area: survey;
   background-image: url("../images/png/screenshots/survey_shot.png");
-  transition: transform .3s ease-in;
 }
 
 .project-heading {
@@ -434,6 +424,8 @@ project-boxes .container {
   line-height: 2rem;
 }
 
+/* languages and apps logos */
+
 .language-logos {
   display: flex;
   justify-content: space-around;
@@ -447,84 +439,6 @@ project-boxes .container {
 .language-logos img {
   width: 70px;
 }
-
-/* for switched css imgs */
-
-/* .language-logos {
-  display: grid;
-  grid-template-columns: repeat(12 1fr);
-  grid-template-rows: 1fr;
-  grid-template-areas: 
-  "squid html5 css js git py fl db vs ink live log";
-  justify-content: space-around;
-  align-items: center;
-  padding: .5rem;
-  padding-bottom: 1rem;
-} */
-
-/* .skills-logos {
-  width: 70px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 1rem;
-  align-items: center;
-  margin: 5px;
-  cursor: pointer;
-  display: grid;
-  align-content: end;
-} */
-
-/* 
-#squid {
-  grid-area: squid;
-  background-image: url("../images/svg/logos/Coder-Logo.png");
-}
-#html5 {
-  grid-area: html5;
-  background-image: url("../images/svg/logos/html5_lg.svg");
-}
-#css {
-  grid-area: css;
-  background-image: url("../images/svg/logos/css3_lg.svg");
-}
-#js {
-  grid-area: js;
-  background-image: url("../images/svg/logos/js_lg.svg");
-}
-#git {
-  grid-area: git;
-  background-image: url("../images/svg/logos/github_purple_lg.svg");
-}
-#py {
-  grid-area: py;
-  background-image: url("../images/svg/logos/python-logo.png");
-}
-#fl {
-  grid-area: fl;
-  background-image: url("../images/svg/logos/flask-logo-png-transparent.png");
-}
-#db {
-  grid-area: db;
-  background-image: url("../images/svg/logos/mongodb.png");
-}
-#vs {
-  grid-area: vs;
-  background-image: url("../images/svg/logos/vscode_logo.png");
-}
-#ink {
-  grid-area: ink;
-  background-image: url("../images/svg/logos/inkscape_logo.png");
-}
-#live {
-  grid-area: live;
-  background-image: url("../images/svg/logos/ableton_live.png");
-}
-#log {
-  grid-area: log;
-  background-image: url("../images/svg/logos/logic_pro_logo.png");
-} */
-
 
 /*  skills s p r e a d  */
 
@@ -648,7 +562,8 @@ project-boxes .container {
 
 /* responsive media queries */
 
-/* large monitor niggle adjustment */
+/* large monitor adjustment */
+
 @media screen and (max-width: 1550px) {
 
   #about-text {
@@ -1066,12 +981,12 @@ project-boxes .container {
   h2 {
     font-size: 24px;
   }
+
   /* adjust navbar container */
 
   .container {
     padding: 0;
     margin: 0 auto;
-
   }
 
   /* navbar */
