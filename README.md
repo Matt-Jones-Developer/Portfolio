@@ -26,9 +26,9 @@ For the Python project, you will need to download the repo, install the correct 
 
 ## Usage
 
-To view the deployed portfolio, please go to: https://matt-jones-developer.github.io/Portfolio/
+To view the deployed portfolio, please go to: https://matt-jones-developer.github.io/i-am-developer-Matt-Jones-Portfolio/
 
-The link for this repo: https://github.com/Matt-Jones-Developer/Portfolio
+The link for this repo: https://github.com/Matt-Jones-Developer/i-am-developer-Matt-Jones-Portfolio/
 
 *screenshots of the homepage*
 ![This is a screenshot](/assets/images/demo/portfolio_screenshot1.png)
