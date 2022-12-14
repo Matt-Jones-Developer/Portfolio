@@ -31,6 +31,7 @@
 .wrapper {
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
@@ -224,8 +225,8 @@ em {
   grid-template-rows: repeat(16, 1fr);
   gap: 3px;
   width: 100vw;
-  height: 250px;
-  margin-left: .5rem;
+  height: 300px;
+  margin-left: .7rem;
   padding: 2rem;
   padding-bottom: 4rem;
   z-index: -1;
@@ -242,22 +243,22 @@ em {
 
 #aqua {
   background-color: var(--highlight);
-  animation: colourFade 1s ease alternate infinite;
+  animation: colourFade 3.2s ease alternate infinite;
 }
 
 #peach {
   background-color: var(--peachy);
-  animation: colourFade 2s ease alternate infinite;
+  animation: colourFade 2.5s ease alternate infinite;
 }
 
 #purple {
   background-color: var(--purps);
-  animation: colourFade 3s ease alternate infinite;
+  animation: colourFade 2s ease alternate infinite;
 }
 
 #lumi {
   background-color: var(--lumi);
-  animation: colourFade 1s ease alternate infinite;
+  animation: colourFade 3s ease alternate infinite;
 }
 
 /* main */
@@ -266,6 +267,21 @@ em {
   margin: 0 auto;
   padding: 2rem;
 
+}
+
+/* all sections */
+
+#about {
+  margin-top: .5rem;
+}
+
+#projects,
+#contact {
+  margin-top: 2rem;
+}
+
+#skills {
+  margin-top: 5rem;
 }
 
 /* section - about */
@@ -327,6 +343,10 @@ em {
 
 /*  section - projects */
 
+#projects {
+  margin: 2rem auto;
+}
+
 project-boxes .container {
   display: flex;
   justify-content: center;
@@ -340,7 +360,7 @@ project-boxes .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 500px 300px 300px 300px;
-  gap: 1rem;
+  gap: 3rem;
   grid-template-areas:
     "studyguide studyguide studyguide"
     "studyguide studyguide studyguide"
@@ -348,53 +368,42 @@ project-boxes .container {
     "bio horiseon survey";
 }
 
-.project-item {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 1rem;
-  align-items: center;
+.project-item img {
+  object-fit: cover;
   cursor: pointer;
-  display: grid;
-  align-content: end;
-
+  width: 100%;
+  height: 100%;
 }
+
 
 /* project screenshots */
 
 #studyguide {
   grid-area: studyguide;
-  background-image: url("../images/png/screenshots/ultimate_study_guide_screenshot_new.png");
 }
 
 #rpk {
   grid-area: rpk;
-  background-image: url("../images/png/screenshots/rock_paper_knife_loader.png");
 }
 
 #gameboy {
   grid-area: gameboy;
-  background-image: url("../images/png/screenshots/gameboy_assets_site.png");
 }
 
 #pools {
   grid-area: pools;
-  background-image: url("../images/png/screenshots/cristalvision_site.png");
 }
 
 #bio {
   grid-area: bio;
-  background-image: url("../images/png/screenshots/bio-metal.png");
 }
 
 #horiseon {
   grid-area: horiseon;
-  background-image: url("../images/png/screenshots/horiseon_screenshot.png");
 }
 
 #survey {
   grid-area: survey;
-  background-image: url("../images/png/screenshots/survey_shot.png");
 }
 
 .project-heading {
@@ -404,6 +413,7 @@ project-boxes .container {
   color: white;
   font-size: 1.2rem;
   border-radius: 0 1rem 0 1rem;
+  z-index: 5;
 }
 
 /* section - skills */
@@ -500,7 +510,8 @@ project-boxes .container {
   align-items: center;
 }
 
-#scloud, #scloud1 {
+#scloud,
+#scloud1 {
   width: 40px;
   height: 40px;
 }
