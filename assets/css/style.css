@@ -649,9 +649,6 @@ project-boxes .container {
     padding-top: 1rem;
   }
 
-  #studyguide {
-    background-image: url("../images/png/screenshots/ultimate_study_guide_topgrid_screenshot.png");
-  }
 
   #project-item {
     object-fit: scale-down;
@@ -699,7 +696,8 @@ project-boxes .container {
   .grid-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows:
-      500px 400px 400px 400px;
+      600px 300px 300px 300px;
+    gap: 2rem;
     grid-template-areas:
       "studyguide studyguide"
       "rpk gameboy"
@@ -728,6 +726,12 @@ project-boxes .container {
     gap: 6px;
   }
 
+  .grid-container {
+    grid-template-rows:
+    500px 300px 300px 300px;
+    gap: 1rem;
+  }
+
   #about-text {
     width: 750px;
   }
@@ -740,6 +744,12 @@ project-boxes .container {
     margin-right: 3px;
     margin-bottom: 2rem;
     gap: 7px;
+  }
+
+  .grid-container {
+    grid-template-rows:
+    300px 300px 300px 300px;
+    gap: 4rem;
   }
 }
 
@@ -881,6 +891,7 @@ project-boxes .container {
 
   .grid-container {
     display: block;
+    margin-bottom: -2rem;
   }
 
   .project-item {
