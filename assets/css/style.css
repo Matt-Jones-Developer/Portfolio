@@ -519,10 +519,13 @@ project-boxes .container {
 /* footer */
 
 .footer {
+  position: relative;
+  top: 0;
   background-color: var(--dark);
   display: block;
   text-align: center;
   height: 150px;
+  padding-top: .5rem;
   margin: 0 auto;
 }
 
@@ -544,10 +547,12 @@ project-boxes .container {
   font-size: 18px;
 }
 
+
 .ul-icons {
   display: inline-flex;
-  position: relative;
+  justify-content: center;
   text-decoration: none;
+  margin-left: -2rem;
 }
 
 .ul-icons>li {
@@ -871,9 +876,25 @@ project-boxes .container {
     padding: 5px;
   }
 
+  /* about section */
+
   #about-text {
     width: 400px;
     margin: 0;
+  }
+
+  #photo img {
+    width: 350px;
+    height: 350px;
+    border-radius: 20rem;
+    text-align: center;
+    border: 3px solid var(--highlight);
+    margin-top: .5rem;
+  }
+  
+  #photo {
+    width: 400px;
+    padding: 1rem;
   }
 
   .bg-grid-container {
@@ -982,6 +1003,16 @@ project-boxes .container {
     width: 300px;
     height: 300px;
   }
+  
+  #photo {
+    width: 350px;
+    padding: 1rem;
+  }
+
+  .footer-icons {
+    width: 350px;
+  }
+
 }
 
 @media screen and (max-width: 320px) {
@@ -1073,8 +1104,31 @@ project-boxes .container {
     margin: 0;
   }
 
+  #photo img {
+    width: 250px;
+    height: 250px;
+  }
+  
+  #photo {
+    width: 300px;
+    padding: 1rem;
+  }
+
   #skills {
     margin-top: 4rem;
+  }
+
+
+  .ul-icons img {
+    width: 20px;
+  }
+  
+  .ul-icons>li {
+    padding: 1rem 2px;
+  }
+
+  .footer-text {
+    font-size: 14px;
   }
 
 }
