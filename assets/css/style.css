@@ -895,9 +895,10 @@ project-boxes .container {
   }
 
   .project-item {
-    height: 300px;
-    margin-bottom: 2rem;
+    height: 280px;
+    margin-bottom: .3rem;
   }
+
 
   .skills-box ul {
     display: block;
@@ -964,6 +965,12 @@ project-boxes .container {
     margin-bottom: 1rem;
     gap: 3px;
   }
+
+  .project-item {
+    height: 250px;
+    margin-bottom: .3rem;
+  }
+
 
   #about-text {
     width: 350px;
@@ -1048,12 +1055,26 @@ project-boxes .container {
     gap: 3px;
   }
 
+  .grid-container {
+
+    margin-bottom: -4rem;
+  }
+
+  .project-item {
+    height: 250px;
+    margin-bottom: .3rem;
+  }
+
   /* about section */
 
   #about-text {
     width: 300px;
     padding: 0;
     margin: 0;
+  }
+
+  #skills {
+    margin-top: 4rem;
   }
 
 }
